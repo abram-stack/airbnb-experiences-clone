@@ -13,7 +13,8 @@ body {
 }
 
 .nav--logo{
-  max-width: 100px;
+  width: 100px;
+  height: 35px;
 }
 section{
   padding: 20px;

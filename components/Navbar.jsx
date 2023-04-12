@@ -1,7 +1,10 @@
 export default function Navbar() {
   return (
     <nav className='nav'>
-      <img classname='nav--logo' src='/airbnb-logo.png' />
+      <picture className='nav--logo'>
+        <source srcSet='/airbnb-logo.webp' type='image/webp' />
+        <img src='/airbnb-logo.png' alt='logo' className='nav--logo' />
+      </picture>
     </nav>
   );
 }

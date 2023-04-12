@@ -5,7 +5,10 @@ export default function Card({ card }) {
   console.log(card);
   return (
     <div className='card'>
-      <img src={coverImg} className='card--image' />
+      <picture>
+        <source srcSet={coverImg} type='image/webp' />
+        <img src={coverImg} className='card--image' alt={title} />
+      </picture>
       <div className='card--stats'>
         <span className='card--star'>
           <AiFillStar />
