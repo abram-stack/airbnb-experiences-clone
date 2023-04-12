@@ -1,20 +1,22 @@
 import { AiFillStar } from 'react-icons/ai';
 
-export default function Card() {
+export default function Card({ card }) {
+  const { coverImg, stats, location, title, price } = card;
+  console.log(card);
   return (
     <div className='card'>
-      <img src='/portrait-1.jpg' className='card--image' />
+      <img src={coverImg} className='card--image' />
       <div className='card--stats'>
         <span className='card--star'>
           <AiFillStar />
         </span>
-        <span>5.0</span>
-        <span className='text-light'>(6) • </span>
-        <span className='text-light'>United States</span>
+        <span>{stats.rating}</span>
+        <span className='text-light'>({stats.reviewCount}) • </span>
+        <span className='text-light'>{location}</span>
       </div>
-      <p>Plan The Perfect New York Vacation</p>
+      <p>{title}</p>
       <p>
-        <span className='text-bold'>From 18 $</span> / person
+        <span className='text-bold'>From {price} $</span> / person
       </p>
     </div>
   );
